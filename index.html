@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Openings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="index.html" class="careers-link">Job Openings</a></li>
+                <li><a href="support.html" class="careers-link">Support</a></li>
+            </ul>
+        </nav>
+        <div class="cta-section">
+            <div class="cta-text">
+                <p>Ready to create your own journey?</p>
+            </div>
+        </div>
+    </header>
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Explore Our Open Positions</h1>
+            <p>Find the right opportunity for you and start your career journey with us.</p>
+        </div>
+    </div>
+    <main>
+        <section class="job-listings">
+            <h2>Current Job Openings</h2>
+            <div class="job-cards">
+                <!-- Example job cards -->
+                <div class="job-card" onclick="showJobDetails('job1')">
+                    <h3>Software Engineer</h3>
+                    <p>JOB code - R-2345677</p>
+                </div>
+                <div class="job-card" onclick="showJobDetails('job2')">
+                    <h3>Data Scientist</h3>
+                    <p>JOB code - R-235675677</p>
+                </div>
+                <div class="job-card" onclick="showJobDetails('job3')">
+                    <h3>Product Manager</h3>
+                    <p>JOB code - R-2345678</p>
+                </div>
+                <div class="job-card" onclick="showJobDetails('job4')">
+                    <h3>UX Designer</h3>
+                    <p>JOB code - R-2345679</p>
+                </div>
+                <div class="job-card" onclick="showJobDetails('job5')">
+                    <h3>Marketing Specialist</h3>
+                    <p>JOB code - R-2345680</p>
+                </div>
+                <div class="job-card" onclick="showJobDetails('job6')">
+                    <h3>Business Analyst</h3>
+                    <p>JOB code - R-2345681</p>
+                </div>
+            </div>
+        </section>
+        <section id="jobDetails" class="job-details-section">
+            <!-- Job details will be displayed here -->
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

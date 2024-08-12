@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life at T4</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0e0e0; /* Light gray background for the body */
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            background-color: #000; /* Black background for the navbar */
+            padding: 0.5rem 1rem;
+            position: fixed; /* Fixed at the top */
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: #fff; /* White text color */
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #555; /* Darker background on hover */
+        }
+
+        /* Content Adjustments */
+        .content {
+            max-width: 1200px;
+            margin: 4rem auto 2rem; /* Added margin-top to accommodate navbar */
+            padding: 0 1rem;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .intro h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #000; /* Black for the main heading */
+        }
+
+        .intro p {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: #555; /* Dark gray for the intro text */
+        }
+
+        .section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            border-radius: 1px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            height: 300px; /* Fixed height for all sections */
+        }
+
+        .section-text, .section-image {
+            flex: 1;
+            padding: 1.0rem;
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+        }
+
+        .section-text {
+            background: #ffffff; /* White background for the text area */
+        }
+
+        .section-image {
+            text-align: center;
+            height: 100%;
+            background: none; /* Remove background color from images */
+        }
+
+        .section-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #000; /* Black for section headings */
+        }
+
+        .section-text p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #666; /* Medium gray for paragraph text */
+        }
+
+        .section:nth-of-type(1) {
+            background: #d0d0d0; /* Slightly darker gray for the first section */
+        }
+
+        .section:nth-of-type(2) {
+            background: #c0c0c0; /* Light gray for the second section */
+        }
+
+        .section:nth-of-type(3) {
+            background: #b0b0b0; /* Medium gray for the third section */
+        }
+
+        .section:nth-of-type(4) {
+            background: #a0a0a0; /* Slightly darker gray for the fourth section */
+        }
+
+        .section img {
+            max-width: 100%;
+            height: 100%; /* Make images fill the height of their container */
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+            border-radius: 8px;
+        }
+
+        .footer {
+            background: #000; /* Black for footer background */
+            color: #fff; /* White text for contrast */
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="index.html">Job Openings</a>
+        <a href="support.html">Support</a>
+    </div>
+
+    <div class="content">
+        <section class="intro">
+            <h1>Discover Life at T4</h1>
+            <p>At T4, we believe that a great workplace is defined by a strong culture and an environment where everyone feels valued and empowered to be their best self. Explore what makes life at T4 unique and why we love coming to work every day.</p>
+        </section>
+
+        <section class="section">
+            <div class="section-text">
+                <h2>Our Culture</h2>
+                <p>Our culture is rooted in collaboration, innovation, and respect. We encourage open communication and the sharing of ideas to foster creativity and growth. At T4, you’ll find a community of passionate individuals who support each other in achieving their goals.</p>
+            </div>
+            <div class="section-image">
+                <img src="imgs/Culture_t4.png" alt="T4 Culture"> <!-- Add .png file -->
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-image">
+                <img src="imgs/environment_t4.png" alt="T4 Environment"> <!-- Add .png file -->
+            </div>
+            <div class="section-text">
+                <h2>Our Environment</h2>
+                <p>We take pride in providing a dynamic and flexible work environment that adapts to the needs of our employees. Whether you're in the office or working remotely, T4 ensures you have the tools and support needed to thrive.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-text">
+                <h2>Work-Life Balance</h2>
+                <p>We understand the importance of balance in life. At T4, we promote a healthy work-life balance with flexible working hours, wellness programs, and ample opportunities to recharge and rejuvenate.</p>
+            </div>
+            <div class="section-image">
+                <img src="imgs/work–life-balance_t4.png" alt="Work-Life Balance at T4"> <!-- Add .png file -->
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 T4. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

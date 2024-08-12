@@ -1,0 +1,406 @@
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    position: absolute; /* Position absolutely so it's above the video */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2; /* Ensure it is above the video */
+    background-color: transparent; /* Make the navbar background transparent */
+    color: black;
+    padding: 20px;
+    border-bottom: 1px solid transparent; /* Remove bottom border */
+}
+/* Header Background Image */
+header::before {
+    content: ''; /* Empty content for pseudo-element */
+    position: absolute; /* Position absolutely to cover the section */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    background: url('path-to-your-navbar-background-image.jpg') no-repeat center center; /* Replace with the path to your image */
+    background-size: cover; /* Ensure the image covers the section */
+    z-index: -1; /* Place background image behind the text */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Space out items to align left and right */
+    align-items: center; /* Center items vertically */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: black; /* Change text color to white to be visible over video */
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    color: #007bff; /* Change text color on hover */
+    border-bottom: 2px solid #007bff; /* Add underline */
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: #e6e6fa; /* Lavender color */
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+    margin-top: 20px; /* Space below the header */
+}
+
+.cta-text p {
+    font-size: 2em; /* Increase font size */
+    color: #333;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero-section {
+    
+    background-size: cover;
+    color: black;
+    text-align: center;
+    padding: 80px 20px;
+    background-color: lavender;
+}
+
+.hero-content h1 {
+    font-size: 2em;
+    
+    margin: 0;
+    color: #007bff; /* Blue color for the heading */
+    background-color: lavender;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Main Content */
+main {
+    display: flex;
+    gap: 20px; /* Space between sections */
+    padding: 20px;
+}
+
+/* Job Listings (for index.html) */
+.job-listings {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 80vh; /* Set a max height and make it scrollable */
+    overflow-y: auto;
+}
+
+.job-listings h2 {
+    font-size: 2em;
+    color: #343a40;
+    margin: 0;
+}
+
+.job-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.job-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.job-card h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #007bff;
+}
+
+.job-card p {
+    margin: 10px 0;
+}
+
+/* Job Details Section */
+.job-details-section {
+    flex: 1;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Ensure scrolling if content is long */
+}
+
+.job-details-section h2 {
+    color: #007bff;
+    font-size: 2em;
+}
+
+.job-details-section p {
+    line-height: 1.6;
+}
+
+.job-details-section .apply-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 20px;
+}
+
+.job-details-section .apply-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+/* Home Page Styles */
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* First half of the viewport height */
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the container */
+    z-index: -1; /* Keep the video behind content */
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: #ffffff; /* Text color for contrast */
+    z-index: 1; /* Ensure text is above the video */
+}
+
+.overlay-text h1 {
+    font-size: 3em;
+    margin: 0;
+    font-weight: bold;
+    color: #007bff; /* Blue color for the welcome text */
+}
+
+.overlay-text p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+/* Home Page Styles */
+.home-header nav ul li a {
+    color: black; /* Set the text color to black */
+}
+
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* First half of the viewport height */
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the container */
+    z-index: -1; /* Keep the video behind content */
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 2%; /* Adjust left position for alignment */
+    transform: translateY(-50%); /* Only translate vertically */
+    text-align: left; /* Ensure text is left-aligned */
+    color: black; /* Text color for contrast */
+    z-index: 1; /* Ensure text is above the video */
+}
+
+.overlay-text h1 {
+    font-size: 3em;
+    margin: 0;
+    font-weight: bold;
+    color: black; /* Keep the text color black */
+}
+
+.overlay-text p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+
+/* Ensure navbar is transparent and text is black on the home page */
+.home-header {
+    background: transparent;
+    color: black; /* Set header text color to black */
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10; /* Ensure the navbar is above the video */
+}
+/* Button Styling */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: black; /* Black background */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 20px; /* Space above the button */
+}
+
+/* Button Hover Effect */
+.cta-button:hover {
+    background-color: #333; /* Slightly lighter black on hover */
+    color: #ffffff; /* Keep text color white on hover */
+}
+/* Info Cards Section */
+.info-cards {
+    display: flex;
+    justify-content: space-around; /* Space out cards evenly */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background color for contrast */
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 10px;
+    max-width: 300px; /* Limit the width of each card */
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    color: black; /* Blue color for card headings */
+    margin: 0 0 10px; /* Space below the heading */
+}
+
+.card p {
+    font-size: 1em;
+    color: #333;
+    margin: 0;
+}
+
+/* Ensure responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .info-cards {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center;
+    }
+}
+/* Ensure cards fill the clickable area */
+.info-cards .card {
+    display: block; /* Make the entire card clickable */
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    max-width: 300px; /* Limit the width of each card */
+    text-align: center;
+    text-decoration: none; /* Remove default link styling */
+    color: inherit; /* Inherit text color from the parent */
+}
+
+/* Hover effect for clickable cards */
+.info-cards .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+/* Intro Text Section */
+.intro-text {
+    padding: 20px;
+    background-color: #e6e6fa; /* Lavender background or adjust as needed */
+    text-align: center;
+}
+
+.intro-text h2 {
+    font-size: 2em;
+    color: black; /* Blue color for heading */
+    margin-bottom: 10px;
+}
+
+.intro-text p {
+    font-size: 1.2em;
+    color: #333;
+    margin: 0;
+}
